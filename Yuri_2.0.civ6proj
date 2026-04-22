@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
+    <Name>Yuri_2.0</Name>
+    <Guid>54fdb7a9-f382-4561-91fc-45a91c42eae4</Guid>
+    <ProjectGuid>4ef78c1b-a681-4620-bdb9-54ca8d8c3347</ProjectGuid>
+    <ModVersion>2</ModVersion>
+    <Teaser>Adds Yuri and the Literature Club as a playable civilization.</Teaser>
+    <TeaserImage>WorkshopPreview.png</TeaserImage>
+    <Description>Adds Yuri and the Literature Club as a playable civilization with a unique leader ability and district.</Description>
+    <Authors>31034</Authors>
+    <AffectsSavedGames>true</AffectsSavedGames>
+    <SupportsSinglePlayer>true</SupportsSinglePlayer>
+    <SupportsMultiplayer>true</SupportsMultiplayer>
+    <SupportsHotSeat>true</SupportsHotSeat>
+    <CompatibleVersions>1.2,2.0</CompatibleVersions>
+    <AssociationData><![CDATA[<Associations><Dependency type="Dlc" title="Expansion: Gathering Storm" id="4873eb62-8ccc-4574-b784-dda455e74e68" /></Associations>]]></AssociationData>
+    <ActionCriteriaData><![CDATA[<ActionCriteria><Criteria id="YuriCriteria"><LeaderPlayable>Players:Expansion2_Players::LEADER_YURI</LeaderPlayable></Criteria><Criteria id="YuriXP2"><RuleSetInUse>RULESET_EXPANSION_2</RuleSetInUse></Criteria></ActionCriteria>]]></ActionCriteriaData>
+    <FrontEndActionData><![CDATA[<FrontEndActions><UpdateDatabase id="Config"><File>Leader/Leader_Config.xml</File><File>Leader/Leader_FrontEnd.sql</File></UpdateDatabase><UpdateColors id="ConfigColors"><File>Leader/Leader_Colors.sql</File></UpdateColors><UpdateText id="ConfigText"><File>Yuri_Text/Yuri_Text_Config.xml</File><File>Yuri_Text/Yuri_Text_Chinese.xml</File><File>Yuri_Text/Yuri_Text_Loading.xml</File></UpdateText><UpdateIcons id="ConfigIcons"><File>Core/NewIcons.xml</File></UpdateIcons><UpdateArt id="ConfigArt"><File>Yuri_2.0.dep</File></UpdateArt></FrontEndActions>]]></FrontEndActionData>
+    <InGameActionData><![CDATA[<InGameActions><ImportFiles id="YuriDiplomacyReplacement"><Properties><LoadOrder>2000000000</LoadOrder></Properties><Criteria>YuriXP2</Criteria><File>UI/Replacement/DiplomacyActionView.xml</File><File>UI/Replacement/DiplomacyActionView.lua</File></ImportFiles><UpdateDatabase id="Gameplay"><Criteria>YuriCriteria</Criteria><File>Leader/Yuri_Leaders.xml</File><File>Core/Yuri_Civilization.xml</File><File>Core/Yuri_Civilization_Bonus.sql</File><File>Core/Yuri_District.xml</File><File>Core/Yuri_Units.xml</File><File>Leader/Leader_Screens.sql</File></UpdateDatabase><UpdateColors id="GameplayColors"><Criteria>YuriCriteria</Criteria><File>Leader/Leader_Colors.sql</File></UpdateColors><UpdateText id="GameplayText"><Criteria>YuriCriteria</Criteria><File>Yuri_Text/Yuri_Text_Gameplay.xml</File><File>Yuri_Text/Yuri_Text_Cities.xml</File><File>Yuri_Text/Yuri_Text_Chinese.xml</File><File>Yuri_Text/Yuri_Text_Loading.xml</File></UpdateText><UpdateIcons id="Icons"><Criteria>YuriCriteria</Criteria><File>Core/NewIcons.xml</File></UpdateIcons><UpdateArt id="Art"><Criteria>YuriCriteria</Criteria><File>Yuri_2.0.dep</File></UpdateArt></InGameActions>]]></InGameActionData>
+    <AssemblyName>Yuri_2.0</AssemblyName>
+    <RootNamespace>Yuri_2.0</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="ArtDefs\" />
+    <Folder Include="Core\" />
+    <Folder Include="Leader\" />
+    <Folder Include="Platforms\" />
+    <Folder Include="Platforms\MacOS\" />
+    <Folder Include="Platforms\MacOS\BLPs\" />
+    <Folder Include="Platforms\Windows\" />
+    <Folder Include="Platforms\Windows\BLPs\" />
+    <Folder Include="Textures\" />
+    <Folder Include="UI\" />
+    <Folder Include="UI\Replacement\" />
+    <Folder Include="XLPs\" />
+    <Folder Include="Yuri_Text\" />
+    <Content Include="Core\NewIcons.xml" />
+    <Content Include="Core\Yuri_Civilization.xml" />
+    <Content Include="Core\Yuri_Civilization_Bonus.sql" />
+    <Content Include="Core\Yuri_District.xml" />
+    <Content Include="Core\Yuri_Units.xml" />
+    <Content Include="Leader\Leader_Colors.sql" />
+    <Content Include="Leader\Leader_Config.xml" />
+    <Content Include="Leader\Leader_FrontEnd.sql" />
+    <Content Include="Leader\Leader_Screens.sql" />
+    <Content Include="Leader\Yuri_Leaders.xml" />
+    <Content Include="Platforms\MacOS\BLPs\Yuri_UI.blp" />
+    <Content Include="Platforms\Windows\BLPs\Yuri_UI.blp" />
+    <Content Include="Textures\LEADER_YURI_BACKGROUND.dds" />
+    <Content Include="Textures\LEADER_YURI_BACKGROUND.tex" />
+    <Content Include="Textures\LEADER_YURI_DIPLOMACY.dds" />
+    <Content Include="Textures\LEADER_YURI_DIPLOMACY.tex" />
+    <Content Include="Textures\LEADER_YURI_NEUTRAL.dds" />
+    <Content Include="Textures\LEADER_YURI_NEUTRAL.tex" />
+    <Content Include="Textures\LEADER_YURI_NEUTRAL2.dds" />
+    <Content Include="Textures\LEADER_YURI_NEUTRAL2.tex" />
+    <Content Include="Textures\YuriCiv22.dds" />
+    <Content Include="Textures\YuriCiv22.tex" />
+    <Content Include="Textures\YuriCiv30.dds" />
+    <Content Include="Textures\YuriCiv30.tex" />
+    <Content Include="Textures\YuriCiv32.dds" />
+    <Content Include="Textures\YuriCiv32.tex" />
+    <Content Include="Textures\YuriCiv36.dds" />
+    <Content Include="Textures\YuriCiv36.tex" />
+    <Content Include="Textures\YuriCiv44.dds" />
+    <Content Include="Textures\YuriCiv44.tex" />
+    <Content Include="Textures\YuriCiv45.dds" />
+    <Content Include="Textures\YuriCiv45.tex" />
+    <Content Include="Textures\YuriCiv48.dds" />
+    <Content Include="Textures\YuriCiv48.tex" />
+    <Content Include="Textures\YuriCiv50.dds" />
+    <Content Include="Textures\YuriCiv50.tex" />
+    <Content Include="Textures\YuriCiv64.dds" />
+    <Content Include="Textures\YuriCiv64.tex" />
+    <Content Include="Textures\YuriCiv80.dds" />
+    <Content Include="Textures\YuriCiv80.tex" />
+    <Content Include="Textures\YuriCiv128.dds" />
+    <Content Include="Textures\YuriCiv128.tex" />
+    <Content Include="Textures\YuriCiv200.dds" />
+    <Content Include="Textures\YuriCiv200.tex" />
+    <Content Include="Textures\YuriCiv256.dds" />
+    <Content Include="Textures\YuriCiv256.tex" />
+    <Content Include="Textures\YuriTrait22.dds" />
+    <Content Include="Textures\YuriTrait22.tex" />
+    <Content Include="Textures\YuriTrait30.dds" />
+    <Content Include="Textures\YuriTrait30.tex" />
+    <Content Include="Textures\YuriTrait32.dds" />
+    <Content Include="Textures\YuriTrait32.tex" />
+    <Content Include="Textures\YuriTrait36.dds" />
+    <Content Include="Textures\YuriTrait36.tex" />
+    <Content Include="Textures\YuriTrait44.dds" />
+    <Content Include="Textures\YuriTrait44.tex" />
+    <Content Include="Textures\YuriTrait45.dds" />
+    <Content Include="Textures\YuriTrait45.tex" />
+    <Content Include="Textures\YuriTrait48.dds" />
+    <Content Include="Textures\YuriTrait48.tex" />
+    <Content Include="Textures\YuriTrait50.dds" />
+    <Content Include="Textures\YuriTrait50.tex" />
+    <Content Include="Textures\YuriTrait64.dds" />
+    <Content Include="Textures\YuriTrait64.tex" />
+    <Content Include="Textures\YuriTrait80.dds" />
+    <Content Include="Textures\YuriTrait80.tex" />
+    <Content Include="Textures\YuriTrait128.dds" />
+    <Content Include="Textures\YuriTrait128.tex" />
+    <Content Include="Textures\YuriTrait200.dds" />
+    <Content Include="Textures\YuriTrait200.tex" />
+    <Content Include="Textures\YuriTrait256.dds" />
+    <Content Include="Textures\YuriTrait256.tex" />
+    <Content Include="Textures\YURI_1.dds" />
+    <Content Include="Textures\YURI_1.tex" />
+    <Content Include="Textures\YURI_4.dds" />
+    <Content Include="Textures\YURI_4.tex" />
+    <Content Include="Textures\YuriLeader32.dds" />
+    <Content Include="Textures\YuriLeader32.tex" />
+    <Content Include="Textures\YuriLeader45.dds" />
+    <Content Include="Textures\YuriLeader45.tex" />
+    <Content Include="Textures\YuriLeader48.dds" />
+    <Content Include="Textures\YuriLeader48.tex" />
+    <Content Include="Textures\YuriLeader50.dds" />
+    <Content Include="Textures\YuriLeader50.tex" />
+    <Content Include="Textures\YuriLeader55.dds" />
+    <Content Include="Textures\YuriLeader55.tex" />
+    <Content Include="Textures\YuriLeader64.dds" />
+    <Content Include="Textures\YuriLeader64.tex" />
+    <Content Include="Textures\YuriLeader80.dds" />
+    <Content Include="Textures\YuriLeader80.tex" />
+    <Content Include="Textures\YuriLeader256.dds" />
+    <Content Include="Textures\YuriLeader256.tex" />
+    <Content Include="Yuri_Text\Yuri_Text_Cities.xml" />
+    <Content Include="Yuri_Text\Yuri_Text_Chinese.xml" />
+    <Content Include="Yuri_Text\Yuri_Text_Config.xml" />
+    <Content Include="Yuri_Text\Yuri_Text_Gameplay.xml" />
+    <Content Include="Yuri_Text\Yuri_Text_Loading.xml" />
+    <Content Include="UI\Replacement\DiplomacyActionView.lua" />
+    <Content Include="UI\Replacement\DiplomacyActionView.xml" />
+    <Content Include="WorkshopPreview.png" />
+    <None Include="ArtDefs\Districts.artdef" />
+    <None Include="ArtDefs\Units.artdef" />
+    <None Include="XLPs\Yuri_UI.xlp" />
+    <None Include="Yuri_2.0.Art.xml" />
+    <None Include="Yuri_2.0.dep" />
+  </ItemGroup>
+  <Import Project="$(MSBuildLocalExtensionPath)Civ6.targets" />
+</Project>

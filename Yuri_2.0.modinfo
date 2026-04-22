@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="54fdb7a9-f382-4561-91fc-45a91c42eae4" version="2">
+  <Properties>
+    <Name>Yuri_2.0</Name>
+    <Description>Adds Yuri and the Literature Club as a playable civilization with a unique leader ability and district.</Description>
+    <Teaser>Adds Yuri and the Literature Club as a playable civilization.</Teaser>
+    <TeaserImage>WorkshopPreview.png</TeaserImage>
+    <Authors>31034</Authors>
+    <CompatibleVersions>1.2,2.0</CompatibleVersions>
+  </Properties>
+  <Dependencies>
+    <Mod id="4873eb62-8ccc-4574-b784-dda455e74e68" title="Expansion: Gathering Storm" />
+  </Dependencies>
+  <ActionCriteria>
+    <Criteria id="YuriCriteria">
+      <LeaderPlayable>Players:Expansion2_Players::LEADER_YURI</LeaderPlayable>
+    </Criteria>
+    <Criteria id="YuriXP2">
+      <RuleSetInUse>RULESET_EXPANSION_2</RuleSetInUse>
+    </Criteria>
+  </ActionCriteria>
+  <FrontEndActions>
+    <UpdateDatabase id="Config">
+      <File>Leader/Leader_Config.xml</File>
+      <File>Leader/Leader_FrontEnd.sql</File>
+    </UpdateDatabase>
+    <UpdateColors id="ConfigColors">
+      <File>Leader/Leader_Colors.sql</File>
+    </UpdateColors>
+    <UpdateArt id="ConfigArt">
+      <File>Yuri_2.0.dep</File>
+    </UpdateArt>
+    <UpdateText id="ConfigText">
+      <File>Yuri_Text/Yuri_Text_Config.xml</File>
+      <File>Yuri_Text/Yuri_Text_Chinese.xml</File>
+      <File>Yuri_Text/Yuri_Text_Loading.xml</File>
+    </UpdateText>
+    <UpdateIcons id="ConfigIcons">
+      <File>Core/NewIcons.xml</File>
+    </UpdateIcons>
+  </FrontEndActions>
+  <InGameActions>
+    <ImportFiles id="YuriDiplomacyReplacement">
+      <Properties>
+        <LoadOrder>2000000000</LoadOrder>
+      </Properties>
+      <Criteria>YuriXP2</Criteria>
+      <File>UI/Replacement/DiplomacyActionView.xml</File>
+      <File>UI/Replacement/DiplomacyActionView.lua</File>
+    </ImportFiles>
+    <UpdateDatabase id="Gameplay">
+      <Criteria>YuriCriteria</Criteria>
+      <File>Leader/Yuri_Leaders.xml</File>
+      <File>Core/Yuri_Civilization.xml</File>
+      <File>Core/Yuri_Civilization_Bonus.sql</File>
+      <File>Core/Yuri_District.xml</File>
+      <File>Core/Yuri_Units.xml</File>
+      <File>Leader/Leader_Screens.sql</File>
+    </UpdateDatabase>
+    <UpdateColors id="GameplayColors">
+      <Criteria>YuriCriteria</Criteria>
+      <File>Leader/Leader_Colors.sql</File>
+    </UpdateColors>
+    <UpdateArt id="Art">
+      <Criteria>YuriCriteria</Criteria>
+      <File>Yuri_2.0.dep</File>
+    </UpdateArt>
+    <UpdateText id="GameplayText">
+      <Criteria>YuriCriteria</Criteria>
+      <File>Yuri_Text/Yuri_Text_Gameplay.xml</File>
+      <File>Yuri_Text/Yuri_Text_Cities.xml</File>
+      <File>Yuri_Text/Yuri_Text_Chinese.xml</File>
+      <File>Yuri_Text/Yuri_Text_Loading.xml</File>
+    </UpdateText>
+    <UpdateIcons id="Icons">
+      <Criteria>YuriCriteria</Criteria>
+      <File>Core/NewIcons.xml</File>
+    </UpdateIcons>
+  </InGameActions>
+  <Files>
+    <File>ArtDefs/Districts.artdef</File>
+    <File>ArtDefs/Units.artdef</File>
+    <File>Platforms/Windows/BLPs/Yuri_UI.blp</File>
+    <File>Platforms/MacOS/BLPs/Yuri_UI.blp</File>
+    <File>Yuri_2.0.Art.xml</File>
+    <File>Yuri_2.0.modinfo</File>
+    <File>Yuri_2.0.dep</File>
+    <File>Core/NewIcons.xml</File>
+    <File>Core/Yuri_Civilization.xml</File>
+    <File>Core/Yuri_Civilization_Bonus.sql</File>
+    <File>Core/Yuri_District.xml</File>
+    <File>Core/Yuri_Units.xml</File>
+    <File>Leader/Leader_Config.xml</File>
+    <File>Leader/Leader_Colors.sql</File>
+    <File>Leader/Leader_FrontEnd.sql</File>
+    <File>Leader/Leader_Screens.sql</File>
+    <File>Leader/Yuri_Leaders.xml</File>
+    <File>XLPs/Yuri_UI.xlp</File>
+    <File>Textures/LEADER_YURI_BACKGROUND.dds</File>
+    <File>Textures/LEADER_YURI_BACKGROUND.tex</File>
+    <File>Textures/LEADER_YURI_DIPLOMACY.dds</File>
+    <File>Textures/LEADER_YURI_DIPLOMACY.tex</File>
+    <File>Textures/LEADER_YURI_NEUTRAL.dds</File>
+    <File>Textures/LEADER_YURI_NEUTRAL.tex</File>
+    <File>Textures/LEADER_YURI_NEUTRAL2.dds</File>
+    <File>Textures/LEADER_YURI_NEUTRAL2.tex</File>
+    <File>Textures/YuriCiv22.dds</File>
+    <File>Textures/YuriCiv22.tex</File>
+    <File>Textures/YuriCiv30.dds</File>
+    <File>Textures/YuriCiv30.tex</File>
+    <File>Textures/YuriCiv32.dds</File>
+    <File>Textures/YuriCiv32.tex</File>
+    <File>Textures/YuriCiv36.dds</File>
+    <File>Textures/YuriCiv36.tex</File>
+    <File>Textures/YuriCiv44.dds</File>
+    <File>Textures/YuriCiv44.tex</File>
+    <File>Textures/YuriCiv45.dds</File>
+    <File>Textures/YuriCiv45.tex</File>
+    <File>Textures/YuriCiv48.dds</File>
+    <File>Textures/YuriCiv48.tex</File>
+    <File>Textures/YuriCiv50.dds</File>
+    <File>Textures/YuriCiv50.tex</File>
+    <File>Textures/YuriCiv64.dds</File>
+    <File>Textures/YuriCiv64.tex</File>
+    <File>Textures/YuriCiv80.dds</File>
+    <File>Textures/YuriCiv80.tex</File>
+    <File>Textures/YuriCiv128.dds</File>
+    <File>Textures/YuriCiv128.tex</File>
+    <File>Textures/YuriCiv200.dds</File>
+    <File>Textures/YuriCiv200.tex</File>
+    <File>Textures/YuriCiv256.dds</File>
+    <File>Textures/YuriCiv256.tex</File>
+    <File>Textures/YuriTrait22.dds</File>
+    <File>Textures/YuriTrait22.tex</File>
+    <File>Textures/YuriTrait30.dds</File>
+    <File>Textures/YuriTrait30.tex</File>
+    <File>Textures/YuriTrait32.dds</File>
+    <File>Textures/YuriTrait32.tex</File>
+    <File>Textures/YuriTrait36.dds</File>
+    <File>Textures/YuriTrait36.tex</File>
+    <File>Textures/YuriTrait44.dds</File>
+    <File>Textures/YuriTrait44.tex</File>
+    <File>Textures/YuriTrait45.dds</File>
+    <File>Textures/YuriTrait45.tex</File>
+    <File>Textures/YuriTrait48.dds</File>
+    <File>Textures/YuriTrait48.tex</File>
+    <File>Textures/YuriTrait50.dds</File>
+    <File>Textures/YuriTrait50.tex</File>
+    <File>Textures/YuriTrait64.dds</File>
+    <File>Textures/YuriTrait64.tex</File>
+    <File>Textures/YuriTrait80.dds</File>
+    <File>Textures/YuriTrait80.tex</File>
+    <File>Textures/YuriTrait128.dds</File>
+    <File>Textures/YuriTrait128.tex</File>
+    <File>Textures/YuriTrait200.dds</File>
+    <File>Textures/YuriTrait200.tex</File>
+    <File>Textures/YuriTrait256.dds</File>
+    <File>Textures/YuriTrait256.tex</File>
+    <File>Textures/YURI_1.dds</File>
+    <File>Textures/YURI_1.tex</File>
+    <File>Textures/YURI_4.dds</File>
+    <File>Textures/YURI_4.tex</File>
+    <File>Textures/YuriLeader32.dds</File>
+    <File>Textures/YuriLeader32.tex</File>
+    <File>Textures/YuriLeader45.dds</File>
+    <File>Textures/YuriLeader45.tex</File>
+    <File>Textures/YuriLeader48.dds</File>
+    <File>Textures/YuriLeader48.tex</File>
+    <File>Textures/YuriLeader50.dds</File>
+    <File>Textures/YuriLeader50.tex</File>
+    <File>Textures/YuriLeader55.dds</File>
+    <File>Textures/YuriLeader55.tex</File>
+    <File>Textures/YuriLeader64.dds</File>
+    <File>Textures/YuriLeader64.tex</File>
+    <File>Textures/YuriLeader80.dds</File>
+    <File>Textures/YuriLeader80.tex</File>
+    <File>Textures/YuriLeader256.dds</File>
+    <File>Textures/YuriLeader256.tex</File>
+    <File>Yuri_Text/Yuri_Text_Config.xml</File>
+    <File>Yuri_Text/Yuri_Text_Gameplay.xml</File>
+    <File>Yuri_Text/Yuri_Text_Cities.xml</File>
+    <File>Yuri_Text/Yuri_Text_Chinese.xml</File>
+    <File>Yuri_Text/Yuri_Text_Loading.xml</File>
+    <File>UI/Replacement/DiplomacyActionView.lua</File>
+    <File>UI/Replacement/DiplomacyActionView.xml</File>
+    <File>WorkshopPreview.png</File>
+  </Files>
+</Mod>
